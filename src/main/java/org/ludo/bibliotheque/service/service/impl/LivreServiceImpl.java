@@ -18,4 +18,9 @@ public class LivreServiceImpl implements LivreService {
     public List<Livre> findAll() {
         return livreRepository.findAll();
     }
+
+    @Override
+    public List<Livre> findByTitreContaining(String mc) {
+        return livreRepository.findByTitreContaining(mc);
+    }
 }
