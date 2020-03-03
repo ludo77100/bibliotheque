@@ -1,0 +1,4 @@
+INSERT INTO livre (id_livre, titre, auteur, editeur, decription, isbn, nombre_Pages, quantite_Dispo) VALUES (1 ,'TITRE', 'AUTEUR', 'EDITEUR', 'DESCRIPTION', 'ISBN', 50, 100)
+INSERT INTO livre (id_livre, titre, auteur, editeur, decription, isbn, nombre_Pages, quantite_Dispo) VALUES (2 ,'TITRE2', 'AUTEUR2', 'EDITEUR2', 'DESCRIPTION2', 'ISBN2', 20, 30)
+INSERT INTO livre (id_livre, titre, auteur, editeur, decription, isbn, nombre_Pages, quantite_Dispo) VALUES (3 ,'TITRE3', 'AUTEUR3', 'EDITEUR3', 'DESCRIPTION3', 'ISBN3', 30, 40)
+INSERT INTO livre (id_livre, titre, auteur, editeur, decription, isbn, nombre_Pages, quantite_Dispo) VALUES (4 ,'TITRE4', 'AUTEUR4', 'EDITEUR4', 'DESCRIPTION4', 'ISBN4', 40, 60)
