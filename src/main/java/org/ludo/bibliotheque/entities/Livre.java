@@ -3,8 +3,6 @@ package org.ludo.bibliotheque.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import java.util.Date;
 
 @Entity
 public class Livre {
@@ -21,10 +19,10 @@ public class Livre {
     private int quantiteDispo ;
 
     public Livre(){
-
     }
 
-    public Livre(String titre, String auteur, String editeur, String decription, String isbn, int nombrePages, int quantiteDispo) {
+    public Livre(int idLivre, String titre, String auteur, String editeur, String decription, String isbn, int nombrePages, int quantiteDispo) {
+        this.idLivre = idLivre;
         this.titre = titre;
         this.auteur = auteur;
         this.editeur = editeur;
@@ -32,6 +30,14 @@ public class Livre {
         this.isbn = isbn;
         NombrePages = nombrePages;
         this.quantiteDispo = quantiteDispo;
+    }
+
+    public int getIdLivre() {
+        return idLivre;
+    }
+
+    public void setIdLivre(int idLivre) {
+        this.idLivre = idLivre;
     }
 
     public String getTitre() {
@@ -90,11 +96,11 @@ public class Livre {
         this.quantiteDispo = quantiteDispo;
     }
 
-
     @Override
     public String toString() {
         return "Livre{" +
-                "titre='" + titre + '\'' +
+                "idLivre=" + idLivre +
+                ", titre='" + titre + '\'' +
                 ", auteur='" + auteur + '\'' +
                 ", editeur='" + editeur + '\'' +
                 ", decription='" + decription + '\'' +

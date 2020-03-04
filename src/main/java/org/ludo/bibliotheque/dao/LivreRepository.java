@@ -12,5 +12,5 @@ import java.util.List;
 @Repository
 public interface LivreRepository extends JpaRepository<Livre, Integer>, JpaSpecificationExecutor<Livre> {
 
-    List<Livre> findByTitreContaining(String mc);
+    List<Livre> findByTitreContainingIgnoreCase(String mc);
 }

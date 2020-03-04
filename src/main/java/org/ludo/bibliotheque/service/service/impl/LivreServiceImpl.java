@@ -20,7 +20,7 @@ public class LivreServiceImpl implements LivreService {
     }
 
     @Override
-    public List<Livre> findByTitreContaining(String mc) {
-        return livreRepository.findByTitreContaining(mc);
+    public List<Livre> findByTitreContainingIgnoreCase(String mc) {
+        return livreRepository.findByTitreContainingIgnoreCase(mc);
     }
 }

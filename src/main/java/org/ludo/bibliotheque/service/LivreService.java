@@ -12,5 +12,5 @@ public interface LivreService {
 
     List<Livre> findAll();
 
-    List<Livre> findByTitreContaining(String mc);
+    List<Livre> findByTitreContainingIgnoreCase(String mc);
 }
