@@ -1,16 +1,7 @@
-package org.ludo.bibliotheque.entities;
+package org.ludo.bibliotheque.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+public class LivreDto {
 
-@Entity
-public class Livre {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idLivre ;
     private String titre ;
     private String auteur ;
     private String editeur ;
@@ -19,10 +10,7 @@ public class Livre {
     private int NombrePages ;
     private int quantiteDispo ;
 
-    public Livre(){
-    }
-
-    public Livre(String titre, String auteur, String editeur, String decription, String isbn, int nombrePages, int quantiteDispo) {
+    public LivreDto(String titre, String auteur, String editeur, String decription, String isbn, int nombrePages, int quantiteDispo) {
         this.titre = titre;
         this.auteur = auteur;
         this.editeur = editeur;
@@ -30,10 +18,6 @@ public class Livre {
         this.isbn = isbn;
         NombrePages = nombrePages;
         this.quantiteDispo = quantiteDispo;
-    }
-
-    public int getIdLivre() {
-        return idLivre;
     }
 
     public String getTitre() {
@@ -94,9 +78,8 @@ public class Livre {
 
     @Override
     public String toString() {
-        return "Livre{" +
-                "idLivre=" + idLivre +
-                ", titre='" + titre + '\'' +
+        return "LivreDto{" +
+                "titre='" + titre + '\'' +
                 ", auteur='" + auteur + '\'' +
                 ", editeur='" + editeur + '\'' +
                 ", decription='" + decription + '\'' +
